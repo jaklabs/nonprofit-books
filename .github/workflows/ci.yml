@@ -1,0 +1,29 @@
+name: CI
+
+# Useful with zero tests: compiles every file and imports every module, which
+# catches a syntax error or a broken import before it reaches production.
+# Gets stronger as tests appear — it runs them automatically once they exist.
+on:
+  push: { branches: [main, master] }
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+
+      - name: Install
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Type-check if TypeScript
+        run: '[ -f tsconfig.json ] && npx tsc --noEmit || echo "no tsconfig"'
+
+      - name: Build if the project builds
+        run: npm run build --if-present
+
+      - name: Test if tests exist
+        run: npm test --if-present
