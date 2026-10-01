@@ -28,11 +28,24 @@ and crediting *without*. Skip it and restricted net assets grow forever.
 
 `statements.test.ts` documents the symptom of skipping it, deliberately.
 
-## ⚠️ Status
-**The accounting citations are NOT independently verified** — ASU 2016-14, 2020-07, 2018-08,
-UCOA, AICPA SSARS. **Verify before anything reaches a CPA or a filing.** The structural
-decisions (double-entry, the two dimensions) do not depend on them; the chart of accounts
-does. The consuming application's repo tracks the verification queue.
+## ✅ Status — citations verified 1 Oct 2026
+All nine queued claims were checked against published sources. **Three produced corrections to
+shipped code**, all in account notes:
+
+- **2300** — CONDITIONAL ≠ RESTRICTED. ASU 2018-08 requires **both** a barrier *and* a right of
+  return/release for a contribution to be conditional (and therefore deferred revenue). A
+  merely purpose-restricted grant is **revenue with donor restrictions on receipt**. The old
+  note conflated the two, which is a common restatement.
+- **3030** — ASU 2016-14 **requires board-designated amounts to be disclosed**, on the face or
+  in the notes. It is a tracked subtotal, not an invisible one.
+- **4300** — ASU 2020-07 verified: separate line item, **disaggregated by category**, with
+  ASC 820 valuation technique and inputs disclosed per category.
+
+⚠️ **Verification is not advice.** The standards say what this library says they say. Whether a
+given transaction falls under them is the organisation's accountant's judgement.
+
+⚠️ The chart is a deliberate simplification of **UCOA** (NCCS + California Association of
+Nonprofits, 200+ accounts cross-referenced to Form 990). ~34 accounts, same 990 lines.
 
 ## Constraints that outrank convenience
 - **Integer cents everywhere.** `dollars()` in `export.ts` is the ONLY conversion, at the

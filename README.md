@@ -68,11 +68,19 @@ opinion. A bundle that overstates its scope invites reliance it cannot carry.
 
 ## ⚠️ Status and scope
 
-**v0.1.0, and the accounting standards cited here are NOT yet independently verified.** They
-were written from working knowledge, and the structural decisions do not depend on them — but
-the chart of accounts does. **Confirm ASU 2016-14, ASU 2020-07, ASU 2018-08 and the AICPA
-SSARS compilation requirements against the current standards before anything from this library
-reaches a CPA or a filing.**
+**v0.1.0. The accounting standards cited here were verified against published sources on
+1 Oct 2026** — ASU 2016-14 (two net asset classes; the expense analysis by both natural and
+functional classification required of *all* NFPs, not only voluntary health and welfare
+organisations), ASU 2018-08 (conditional vs unconditional), ASU 2020-07 (contributed
+nonfinancial assets), and AICPA SSARS AR-C 80 (compilations).
+
+⚠️ **Verification is not advice.** The standards say what this library says they say; whether
+a given transaction falls under them is a judgement for the organisation's accountant. The
+chart of accounts is also a deliberate simplification — the sector standard is the **Unified
+Chart of Accounts (UCOA)**, published by the National Center for Charitable Statistics and the
+California Association of Nonprofits, which runs to 200+ accounts cross-referenced to Form 990
+line items. This chart is ~34 accounts hitting the same 990 lines; map to UCOA if a funder or
+accountant asks for it.
 
 **This is bookkeeping preparation, not a replacement for an accountant.** It exists to make a
 CPA compilation cheap by handing over a balanced ledger instead of a bank export. Which set of

@@ -71,14 +71,14 @@ export const CHART: Account[] = [
   { code: '2010', name: 'Accounts payable', type: 'liability' },
   { code: '2100', name: 'Accrued payroll', type: 'liability' },
   { code: '2150', name: 'Payroll taxes payable', type: 'liability' },
-  { code: '2300', name: 'Deferred revenue', type: 'liability',
-    note: '⚠️ A grant received before its conditions are met is a LIABILITY, not income. Recording it as revenue on receipt overstates this year and understates the next, and a funder comparing two years will ask.' },
+  { code: '2300', name: 'Deferred revenue — conditional contributions', type: 'liability',
+    note: '⚠️ CONDITIONAL is not the same as RESTRICTED, and conflating them is a common restatement. ASU 2018-08: a contribution is CONDITIONAL only when BOTH a barrier exists (a measurable performance requirement — a match, an outcome, a number served) AND the funder has a right of return or release. Only then is it a liability. A grant that is merely RESTRICTED as to purpose, with no barrier, is revenue WITH donor restrictions (4100/4110) on receipt — not deferred. Getting this backwards overstates one year and understates the next, and a funder comparing two years will ask.' },
 
   // ── 3000 Net assets ────────────────────────────────────────────────────────
   { code: '3010', name: 'Net assets without donor restrictions', type: 'net-assets' },
   { code: '3020', name: 'Net assets with donor restrictions', type: 'net-assets' },
   { code: '3030', name: 'Board-designated (within net assets WITHOUT restrictions)', type: 'net-assets',
-    note: '⚠️ Board-designated is NOT donor-restricted. The board can un-designate it tomorrow, so it belongs to the unrestricted class. Treating it as restricted understates what the organisation can actually spend — the figure a funder reads when asking whether you can cover a match.' },
+    note: '⚠️ Board-designated is NOT donor-restricted — only a DONOR can restrict a gift. The board can un-designate it tomorrow, so it belongs to the unrestricted class. Treating it as restricted understates what the organisation can actually spend, which is the figure a funder reads when asking whether you can cover a match. ASU 2016-14 requires board-designated amounts to be DISCLOSED, either on the face of the statements or in the notes — so this is a tracked subtotal, not an invisible one.' },
 
   // ── 4000 Revenue ───────────────────────────────────────────────────────────
   { code: '4010', name: 'Contributions — individual', type: 'revenue' },
@@ -88,8 +88,8 @@ export const CHART: Account[] = [
   { code: '4200', name: 'Program service revenue — Medicaid Home Help', type: 'revenue',
     note: 'Earned, not contributed. Form 990 Part VIII line 2.' },
   { code: '4210', name: 'Program service revenue — adult foster care', type: 'revenue' },
-  { code: '4300', name: 'In-kind contributions', type: 'revenue',
-    note: '⚠️ ASU 2020-07 requires nonfinancial gifts presented separately, with the valuation method disclosed. Confirm the standard before relying on this.' },
+  { code: '4300', name: 'Contributed nonfinancial assets (in-kind)', type: 'revenue',
+    note: 'ASU 2020-07 (periods beginning after 15 Jun 2021): present as a SEPARATE LINE ITEM in the statement of activities, DISAGGREGATED by category of asset, and disclose the valuation technique and inputs per ASC 820 for each category. Donated services have their own recognition test and are not automatically revenue.' },
   { code: '4400', name: 'Investment and interest income', type: 'revenue' },
   { code: '4900', name: 'Net assets released from restriction', type: 'revenue',
     note: '⚠️ Not new money. A reclassification between the two net asset classes as a restricted purpose is satisfied. Without it, restricted net assets grow forever and the balance sheet stops meaning anything.' },
