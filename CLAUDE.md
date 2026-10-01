@@ -51,8 +51,15 @@ does. The consuming application's repo tracks the verification queue.
 ## Conventions
 `npm test` · `npm run typecheck`. Commit the **why**, not just the what.
 
-⚠️ **No licence is granted yet.** Public so the approach can be read, not because reuse rights
-have been decided. Until a `LICENSE` file exists, default copyright applies.
+**MIT licensed** (JD's call, 1 Oct 2026). ⚠️ That grant is effectively irreversible — future
+versions can be relicensed, but every copy already obtained stays MIT forever. Anyone may fork
+this and build a competing product with no obligation to contribute back. That is a different
+trade from [[quarry]]'s AGPL + CC BY-SA, which was chosen precisely to make the register's
+share-alike follow into client deliverables; the lever here is the implementation, not the
+licence.
+
+⚠️ **NOT on npm.** `package.json` keeps `"private": true`, which blocks `npm publish` and
+nothing else. Putting it on the registry is a separate outward-facing decision.
 
 ⚠️ **Commercialising this is a separate decision**, and not one to drift into. Extract a
 product only after it has worked for a real organisation.

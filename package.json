@@ -10,9 +10,17 @@
     "test": "node --test src/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "UNLICENSED",
+  "keywords": [
+    "nonprofit",
+    "accounting",
+    "bookkeeping",
+    "double-entry",
+    "form-990",
+    "fasb",
+    "gaap"
+  ],
+  "author": "Jak Development LLC (d/b/a JAK Labs)",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
@@ -29,5 +37,9 @@
     "typescript": "^5.6.0",
     "@types/node": "^22.0.0"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaklabs/nonprofit-books.git"
+  }
 }

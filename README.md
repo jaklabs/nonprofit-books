@@ -82,7 +82,15 @@ Not yet used in anger. In production with one organisation; not yet a general-pu
 
 ## Licence
 
-⚠️ **No licence is granted yet.** This repository is public so the approach can be read and
-critiqued, not because reuse rights have been decided. Until a `LICENSE` file appears, default
-copyright applies and no permission to use, copy or modify is given. If you want to use it,
-open an issue.
+**MIT.** Use it, fork it, build on it, sell what you build. See `LICENSE`.
+
+⚠️ **The warranty disclaimer is not boilerplate here.** This library helps produce figures that
+go into a Form 990 and in front of funders, and its accounting citations are **not
+independently verified** (see Status above). It enforces that entries balance and that the two
+nonprofit dimensions are present — it cannot tell you that your chart of accounts is right for
+your organisation, that your functional allocation basis is defensible, or that your
+classifications are correct. Those are an accountant's job, and this is designed to make that
+job cheaper rather than to replace it.
+
+Not on npm yet — `package.json` has `"private": true` so nothing is published accidentally.
+Install from git if you want it today.
